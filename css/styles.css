@@ -110,6 +110,54 @@
     --transition-2: 0.5s ease-in-out;
   
   }
+    :root {
+    /* Tema Scuro */
+    --bg-color: hsl(0, 0%, 7%);
+    --text-color: hsl(0, 0%, 100%);
+    --primary-color: hsl(45, 100%, 72%);
+    --secondary-color: hsl(240, 1%, 17%);
+    --border-color: hsl(0, 0%, 22%);
+    --shadow-color: hsla(0, 0%, 0%, 0.25);
+  
+    /* Tema Blu */
+    --bg-color-blue: hsl(210, 36%, 96%);
+    --text-color-blue: hsl(210, 22%, 49%);
+    --primary-color-blue: hsl(210, 100%, 50%);
+    --secondary-color-blue: hsl(210, 22%, 49%);
+    --border-color-blue: hsl(210, 22%, 49%);
+    --shadow-color-blue: hsla(210, 22%, 49%, 0.25);
+  
+    /* Tema Chiaro */
+    --bg-color-light: hsl(0, 0%, 100%);
+    --text-color-light: hsl(0, 0%, 0%);
+    --primary-color-light: hsl(45, 100%, 72%);
+    --secondary-color-light: hsl(0, 0%, 84%);
+    --border-color-light: hsl(0, 0%, 84%);
+    --shadow-color-light: hsla(0, 0%, 0%, 0.15);
+  }
+  
+  /* Tema Attuale */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .sidebar,
+  article {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 16px 30px var(--shadow-color);
+  }
+  
+  .navbar {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+  }
+  
+  .button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
   
   
   

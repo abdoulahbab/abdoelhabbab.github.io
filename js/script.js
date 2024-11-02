@@ -124,3 +124,35 @@ for (let i = 0; i < navigationLinks.length; i++) {
     window.scrollTo(0, 0);
   });
 }
+// Funzione per cambiare tema
+function changeTheme(theme) {
+  const root = document.documentElement;
+
+  if (theme === 'dark') {
+    root.style.setProperty('--bg-color', 'hsl(0, 0%, 7%)');
+    root.style.setProperty('--text-color', 'hsl(0, 0%, 100%)');
+    root.style.setProperty('--primary-color', 'hsl(45, 100%, 72%)');
+    root.style.setProperty('--secondary-color', 'hsl(240, 1%, 17%)');
+    root.style.setProperty('--border-color', 'hsl(0, 0%, 22%)');
+    root.style.setProperty('--shadow-color', 'hsla(0, 0%, 0%, 0.25)');
+  } else if (theme === 'blue') {
+    root.style.setProperty('--bg-color', 'hsl(210, 36%, 96%)');
+    root.style.setProperty('--text-color', 'hsl(210, 22%, 49%)');
+    root.style.setProperty('--primary-color', 'hsl(210, 100%, 50%)');
+    root.style.setProperty('--secondary-color', 'hsl(210, 22%, 49%)');
+    root.style.setProperty('--border-color', 'hsl(210, 22%, 49%)');
+    root.style.setProperty('--shadow-color', 'hsla(210, 22%, 49%, 0.25)');
+  } else if (theme === 'light') {
+    root.style.setProperty('--bg-color', 'hsl(0, 0%, 100%)');
+    root.style.setProperty('--text-color', 'hsl(0, 0%, 0%)');
+    root.style.setProperty('--primary-color', 'hsl(45, 100%, 72%)');
+    root.style.setProperty('--secondary-color', 'hsl(0, 0%, 84%)');
+    root.style.setProperty('--border-color', 'hsl(0, 0%, 84%)');
+    root.style.setProperty('--shadow-color', 'hsla(0, 0%, 0%, 0.15)');
+  }
+}
+
+// Aggiungi event listener ai pulsanti di cambio tema
+document.getElementById('dark-theme-btn').addEventListener('click', () => changeTheme('dark'));
+document.getElementById('blue-theme-btn').addEventListener('click', () => changeTheme('blue'));
+document.getElementById('light-theme-btn').addEventListener('click', () => changeTheme('light'));
